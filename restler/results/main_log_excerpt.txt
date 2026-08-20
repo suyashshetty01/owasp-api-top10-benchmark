@@ -1,0 +1,25 @@
+# RESTler main.txt log excerpt
+
+Verbatim from the student's own terminal output (pasted directly during
+report review, not reconstructed from a screenshot). Original command:
+
+    head -5 ~/restler-work/FuzzLean/RestlerResults/experiment*/logs/main.txt
+
+Output:
+
+```
+Random seed: 12345
+Grammar schema file '/restler/workdir/Compile/grammar_clean.json' does not exist.
+Setting fuzzing schemes: directed-smoke-test
+2026-08-06 22:06:20.115: Going to fuzz a set with 41 requests
+2026-08-06 22:06:20.115: Request-0: Value Combinations: 2
+```
+
+Note the "does not exist" line refers to a `.json` compiled-grammar artefact
+distinct from `grammar_clean.py` itself; RESTler compiles the `.py` grammar
+into this intermediate file, and this line is a routine part of that
+compilation step, not evidence of a missing or broken grammar file.
+
+**TODO**: this is only the first 5 lines. If you still have the full
+`main.txt`, add it here (or a representative excerpt covering the run's
+conclusion) for a more complete artefact.

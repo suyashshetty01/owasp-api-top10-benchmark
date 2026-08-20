@@ -1,0 +1,23 @@
+# JWT Replacer Config — See the Script, Not This File
+
+The actual replacer configuration lives in `zap-authenticated-scan.sh`, using
+a `$JWT_TOKEN` environment variable rather than a hardcoded value, precisely
+so a real token never ends up committed to this repo.
+
+**To run the authenticated scan:**
+
+```bash
+export JWT_TOKEN="eyJhbGc...<your own token, obtained by logging into your own crAPI instance>"
+./zap-authenticated-scan.sh
+```
+
+**Never commit a real JWT.** If you're editing `zap-authenticated-scan.sh`
+and need to test the replacer string locally, export the token as an
+environment variable in your own shell — don't paste it into the script file
+itself.
+
+See the `TODO` comment inside `zap-authenticated-scan.sh` — the full replacer
+config string used in the original study is only partially recoverable from
+the dissertation's figures (the terminal window was cropped mid-command).
+Confirm the complete string against your own shell history before relying on
+this script for an exact reproduction.

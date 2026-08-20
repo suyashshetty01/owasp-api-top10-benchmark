@@ -1,0 +1,17 @@
+{
+  "_provenance_note": "RECONSTRUCTED, not the original file. Transcribed from the terminal screenshot in Dissertation Figure 4.7 during report review (second run, after replacing all 44 fuzzstring placeholders in grammar_final.py with real crAPI-compatible values). Fields below match what was visible in that screenshot; if you still have the real file, replace this with your original and delete this note.",
+  "final_spec_coverage": "1 / 41",
+  "rendered_requests": "33 / 41",
+  "rendered_requests_valid_status": "1 / 33",
+  "num_fully_valid": 1,
+  "num_sequence_failures": 0,
+  "num_invalid_by_failed_resource_creations": 0,
+  "total_object_creations": 116,
+  "total_requests_sent": {
+    "gc": 0,
+    "main_driver": 221,
+    "LeakageRuleChecker": 0,
+    "ResourceHierarchyChecker": 0
+  },
+  "_note_on_regression": "Coverage decreased from 2/41 (run 1) to 1/41 here despite the grammar fix, because network log analysis showed the JWT token was not being injected into outbound requests at all in this run - attributed in the dissertation (Section 4.4) to a platform incompatibility between RESTler's token_refresh_command mechanism and the ARM64-via-x86-emulation environment, not to a problem with the grammar itself."
+}

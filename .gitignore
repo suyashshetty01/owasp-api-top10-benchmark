@@ -1,0 +1,15 @@
+# Never commit real credentials
+*.token
+token.txt
+*jwt*.txt
+.env
+.env.*
+
+# OS/editor noise
+.DS_Store
+*.swp
+__pycache__/
+*.pyc
+
+# Large/generated artefacts you may not want tracked
+*.html.bak

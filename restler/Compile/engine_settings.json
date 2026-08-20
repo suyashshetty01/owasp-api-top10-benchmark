@@ -1,0 +1,14 @@
+{
+  "max_sequence_length": 5,
+  "max_async_wait_time": 20,
+  "add_fuzzable_dates": true,
+  "custom_checkers": [],
+  "custom_bug_codes": [],
+  "target_endpoint": null,
+  "authentication": {
+    "token": {
+      "token_refresh_interval": 99999,
+      "token_refresh_command": "cat /restler/workdir/token.txt"
+    }
+  }
+}
